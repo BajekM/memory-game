@@ -1,3 +1,138 @@
+$color-good : #00ff00;
+$color-computer: #ffff00;
+$color-bad : #ff0000;
+$color-keyboard: rgba(77, 77, 77, 0.6);
+$color-btn: rgba(77, 77, 77, 0.9);
+
+$font-header: 'Staatliches', cursive;
+$font-rules: 'Indie Flower', cursive;
+
+
 body, *, *:before, *:after {
   box-sizing: border-box;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1587309492556-5960dcda7e17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=926&q=80');
+  background-size: contain;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  background: rgba(0,0,0,0.65);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+button {
+  height: 100px;
+  padding: 10px 20px;
+  font-family: $font-rules;
+  color: #ffff00;
+  font-size: 35px;
+  font-weight: 800;
+  border-radius: 10px;
+  background: $color-keyboard;
+  transition: all 0.3s;
+  margin: 20px auto;
+
+  &:hover {
+    background: $color-btn;
+    transition: all 0.3s;
+  }
+}
+
+.summary {
+  text-align: center;
+  display: none;
+
+  p {
+    font-family: $font-rules;
+    text-shadow: 1px 1px 3px black;
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    color: $color-good;
+    margin: 0 20px;
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.gameRules {
+  color: $color-computer;
+
+  h1 {
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+    font-family: $font-header;
+    font-weight: 800;
+    letter-spacing: 6px;
+    font-size: 60px;
+  }
+
+  p {
+    font-family: $font-rules;
+    text-shadow: 1px 1px 3px black;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 5px 20px;
+    text-align: justify;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+
+  > div {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 10px;
+    transition: all .07s ease;
+    background: $color-keyboard;
+    color: white;
+    text-shadow: 0 0 15px black;
+  }
+
+  .goodMove {
+    transform: scale(1.1);
+    border-color: $color-good;
+    box-shadow: 0 0 20px $color-good;
+    color: $color-good;
+  }
+
+  .computerMove {
+    transform: scale(1.1);
+    border-color: $color-computer;
+    box-shadow: 0 0 20px $color-computer;
+    color: $color-computer;
+  }
+
+  .badMove {
+    transform: scale(1.1);
+    border-color: $color-bad;
+    box-shadow: 0 0 20px $color-bad;
+    color: $color-bad;
+  }
 }
