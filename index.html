@@ -13,36 +13,32 @@
   <div class="wrapper">
     <div class="gameRules">
       <h1>Zasady gry</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Nunc eleifend odio leo, quis pellentesque velit tempus eget.
-        In hendrerit nibh felis, ut vestibulum eros varius elementum.
-        Aenean venenatis sollicitudin massa ut facilisis.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        Nunc sodales ligula in dignissim tincidunt. Suspendisse luctus pulvinar massa nec sagittis.
-        Proin in libero scelerisque, scelerisque enim in, ultricies ex.
-        In faucibus urna id lacus mattis, at pellentesque mi vehicula.
-        In nec diam finibus quam vehicula pretium fermentum vitae libero.
-        Nam tincidunt tellus vel augue laoreet, hendrerit pellentesque ex facilisis.
-        Curabitur viverra vehicula condimentum. Cras ac arcu mattis, facilisis odio sit amet, rhoncus dui.
-        Vivamus malesuada sem sit amet velit euismod accumsan. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Nam bibendum enim sit amet dictum finibus. Maecenas elit libero, suscipit eget metus quis, molestie ullamcorper nisl.
+      <p>
+        Twoim zadaniem jest powtarzanie kombinacji strzałek utworzonej przez komputer klikając w odpowiednie klawisze na klawiaturze.<br>
+        Każdej rundy komputer bedzię dodawał do kombinacji jeden ruch.<br>
+        Sprawdź ile ruchów uda ci się zapamiętać.<br>
+        Aby rozpocząć kliknij przycisk start.
       </p>
     </div>
     <div class="buttonsWrapper">
       <div class="row">
-          <div class="up"><i class="fas fa-arrow-up"></i></div>
+          <div class="up" data-key="38"><i class="fas fa-arrow-up"></i></div>
       </div>
       <div class="row">
-        <div class="left"><i class="fas fa-arrow-left"></i></div>
-        <div class="down"><i class="fas fa-arrow-down"></i></div>
-        <div class="right"><i class="fas fa-arrow-right"></i></div>
+        <div class="left" data-key="37"><i class="fas fa-arrow-left"></i></div>
+        <div class="down" data-key="30"><i class="fas fa-arrow-down"></i></div>
+        <div class="right" data-key="39"><i class="fas fa-arrow-right"></i></div>
       </div>
     </div>
-    <button>Start !</button>
+    <button class="start">Start !</button>
     <div class="summary">
       <p></p>
       <button>Jeszcze raz!</button>
     </div>
   </div>
+  <div class="repeat">
+    <h2>Powtórz !</h2>
+  </div>
 </body>
+<script src="js/script.js"></script>
 </html>

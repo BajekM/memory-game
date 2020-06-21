@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   background-attachment: fixed;
+  position: relative;
 }
 
 .wrapper {
@@ -54,14 +55,6 @@ button:hover {
   margin: 0 20px;
 }
 
-.visible {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
 .gameRules {
   color: #ffff00;
 }
@@ -81,7 +74,7 @@ button:hover {
   font-size: 25px;
   font-weight: 700;
   padding: 5px 20px;
-  text-align: justify;
+  text-align: center;
 }
 
 .row {
@@ -105,7 +98,7 @@ button:hover {
       align-items: center;
   font-size: 40px;
   border-radius: 10px;
-  transition: all .07s ease;
+  transition: all 0.3s ease;
   background: rgba(77, 77, 77, 0.6);
   color: white;
   text-shadow: 0 0 15px black;
@@ -130,5 +123,50 @@ button:hover {
   border-color: #ff0000;
   box-shadow: 0 0 20px #ff0000;
   color: #ff0000;
+}
+
+.repeat {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: none;
+}
+
+.repeat h2 {
+  color: #00ff00;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 5px;
+  animation: increase 2s ease;
+}
+
+.visibleBlock {
+  display: block;
+}
+
+.visibleFlex {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes increase {
+  from {
+    font-size: 60px;
+  }
+  to {
+    font-size: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

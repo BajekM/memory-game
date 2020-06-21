@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   background-attachment: fixed;
+  position: relative;
 }
 
 .wrapper {
@@ -64,14 +65,6 @@ button {
   }
 }
 
-.visible {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
 .gameRules {
   color: $color-computer;
 
@@ -90,7 +83,7 @@ button {
     font-size: 25px;
     font-weight: 700;
     padding: 5px 20px;
-    text-align: justify;
+    text-align: center;
   }
 }
 
@@ -109,7 +102,7 @@ button {
     align-items: center;
     font-size: 40px;
     border-radius: 10px;
-    transition: all .07s ease;
+    transition: all 0.3s ease;
     background: $color-keyboard;
     color: white;
     text-shadow: 0 0 15px black;
@@ -134,5 +127,47 @@ button {
     border-color: $color-bad;
     box-shadow: 0 0 20px $color-bad;
     color: $color-bad;
+  }
+}
+
+.repeat {
+  position: absolute;
+  background: rgba(0,0,0,0.9);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  h2 {
+    color: #00ff00;
+    font-family: $font-header;
+    letter-spacing: 5px;
+    animation: increase 2s ease ;
+  }
+}
+
+.visibleBlock {
+  display: block;
+}
+
+.visibleFlex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes increase {
+  from {
+    font-size: 60px;
+  }
+
+  to {
+    font-size: 100px;
   }
 }
